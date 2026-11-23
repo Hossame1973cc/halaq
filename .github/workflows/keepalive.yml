@@ -1,11 +1,11 @@
 # Keeps the free Supabase project from being paused for inactivity
-# by running one small read query every 3 days.
+# by running one small read query every day.
 # The key below is the public "anon" key (already public inside the website).
 name: Keep Supabase active
 
 on:
   schedule:
-    - cron: '17 6 */3 * *'
+    - cron: '17 6 * * *'
   workflow_dispatch:
 
 jobs:
